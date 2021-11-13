@@ -39,8 +39,8 @@ spec:
               port: http
   strategy:
     canary:
-      canaryService: canary-vote-{{ template "helm-guestbook.fullname" . }}
-      stableService: stable-vote-{{ template "helm-guestbook.fullname" . }}
+      canaryService: canary-{{ template "helm-guestbook.fullname" . }}
+      stableService: stable-{{ template "helm-guestbook.fullname" . }}
       trafficRouting:
         istio:
           virtualService: 
