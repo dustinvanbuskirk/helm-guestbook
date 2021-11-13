@@ -17,4 +17,4 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - "{{ Release.Name }}.{{ .Release.Namespace }}.sales-dev.codefresh.io"
+    - "{{ .Release.Name }}.{{ .Release.Namespace }}.sales-dev.codefresh.io"
