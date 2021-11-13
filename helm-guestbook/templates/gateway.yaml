@@ -1,9 +1,9 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: {{ template "fullname" . }}
+  name: {{ template "helm-guestbook.fullname" . }}
   labels:
-    app: {{ template "fullname" . }}
+    app: {{ template "helm-guestbook.fullname" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
     release: {{ .Release.Name  | quote }}
     heritage: {{ .Release.Service  | quote }}
