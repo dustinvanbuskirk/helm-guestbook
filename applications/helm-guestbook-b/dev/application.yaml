@@ -6,9 +6,12 @@ metadata:
 spec:
   project: helm-guestbook-b
   source:
-    repoURL: https://h.cfcr.io/codefreshdemo/demo
-    chart: helm-guestbook
-    targetRevision: 0.1.5
+    repoURL: https://github.com/dustinvanbuskirk/helm-guestbook.git
+    targetRevision: HEAD
+    path: helm-guestbook
+    helm:
+      valueFiles:
+      - ../applications/helm-guestbook-b/dev/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: dev
