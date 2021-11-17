@@ -6,12 +6,9 @@ metadata:
 spec:
   project: helm-guestbook-a
   source:
-    repoURL: https://github.com/dustinvanbuskirk/helm-guestbook.git
+    repoURL: https://github.com/dustinvanbuskirk/helm-guestbook-a.git
     targetRevision: HEAD
-    path: helm-guestbook
-    helm:
-      valueFiles:
-      - ../applications/helm-guestbook-a/dev/values.yaml
+    path: .
   destination:
     server: https://kubernetes.default.svc
     namespace: dev
